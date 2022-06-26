@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>New Case Type</title>
+        <link rel="stylesheet" href="./CreateNewCaseType.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <script src="./CreateNewCaseType.js"></script>
+    </head>
+    <body class="body">
+        <div class="row">
+            <div class="col-12">
+                <h3>Create New Case type</h3>
+                <p class="case-type-header f-12 gray">Case Type Name</p>
+                <input class="col-3 case-type-input f-12 gray gray-border padding-input" type="text" name="casetypename" id="casetypename" placeholder="Enter New Case Type Name">
+                <br><br><br>
+                <button class="btn-primary" onclick="displayAlert()">+Create New Attribute</button>
+                <br><br><br>
+                <a id="save-details" class="btn-primary no-underline disable" href="./CreateNewCase.html" rel="noopener noreferrer">Create New Case</a>
+                <div id="id01" class="w3-modal">
+                    <div class="w3-modal-content w3-animate-top w3-card-4">
+                      <header class="w3-container w3-teal" style="background-color: #007bc3 !important;"> 
+                        <span onclick="document.getElementById('id01').style.display='none'" 
+                        class="w3-button w3-display-topright">&times;</span>
+                        <h4>Create New Case Type</h4>
+                      </header>
+                      <div class="w3-container">
+                          <!-- <form id="myForm"> -->
+                                <div class="row  m-1em ">
+                                    <div class="col-6"><label for="attrName" class="f-12 gray">New Attribute name</p></div>
+                                    <div class="col-6"><input class="f-12 gray gray-border padding-input" id="attrName" type="text" placeholder="Enter New Atribute Name" required></div>
+                                </div>
+                                <div class="row m-1em">
+                                    <div class="col-6"><label for="datalist" class="f-12 gray ">Input Type</p></div>
+                                    <div class="col-6">
+                                        <input onchange="changeInputType(this.value)" id="datalist" list="inputtypes" class="f-12 gray gray-border padding-input" type="text" placeholder="Enter New Atribute Name" required>
+                                        <datalist id="inputtypes">
+                                            <option value="text"></option>
+                                            <option value="number"></option>
+                                            <option value="date"></option>                                            
+                                            <option value="dropdown"></option>
+                                            <option value="radio"></option>
+                                            <option value="checkbox"></option>
+                                        </datalist>
+                                    </div>
+                                </div>
+                                <div id="option-parent-section" class="display-none">
+                                    <div id="option-subparent-section">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6"></div>
+                                        <div class="col-6" style="align-items: flex-end;"><a onclick="addItem()" id="add-item" class="theme-link">Add New Item+</a></div>
+                                    </div>
+                                </div>
+                                <div class="row  m-1em ">
+                                    <div class="col-6"><label for="mandatory-field" class="f-12 gray">Field type</p></div>
+                                    <div class="col-6"><input type="checkbox" name="mandatory" id="mandatory" value="Yes"> <label for="mandatory" class="f-12 gray"> Mandatory</label></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6"></div>
+                                    <div class="col-6"><input type="button" onclick="formSubmitted()" class="btn-primary" value="Submit"></div>
+                                </div>       
+                          <!-- </form>                                          -->
+                        <br><br>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </body>
+</html>

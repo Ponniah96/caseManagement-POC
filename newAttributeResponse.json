@@ -1,0 +1,55 @@
+{
+    "attributes": [
+        {
+            "name": "firstName",
+            "mandatory": "Y",
+            "type": "input"
+        },
+        {
+            "name": "lastName",
+            "mandatory": "Y",
+            "type": "input"
+        },
+        {
+            "name": "country",
+            "mandatory": "Y",
+            "type": "dropdown",
+            "values": [
+                {
+                    "name": "UK",
+                    "value": "1001"
+                },
+                {
+                    "name": "USA",
+                    "value": "1002"
+                }
+            ]
+        }
+    ],
+    "documents": [
+        {
+            "name": "Upload Your Document",
+            "mandatory": "Y",
+            "type": "file"
+        }
+    ],
+    "task": [
+        {
+            "name": "New",
+            "mandatory": "Y",
+            "type": "checkbox"
+        },  {
+            "name": "InProgress",
+            "mandatory": "Y",
+            "type": "checkbox"
+        },  {
+            "name": "Allocated",
+            "mandatory": "Y",
+            "type": "checkbox"
+        },  {
+            "name": "Complted",
+            "mandatory": "Y",
+            "type": "checkbox"
+        }
+    ]
+}

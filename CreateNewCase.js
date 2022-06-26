@@ -43,14 +43,14 @@ function displayAttributes(){
                 if(attributes[j].newCaseTypeElement.length>0){
                     if(attributes[j].newCaseTypeElement=="dropdown"){
                         var select=document.createElement('select');
-                        select.className='col-3 f-12 gray-border padding-input';
+                        select.className='col-3 f-12 padding-input';
                         select.required=true;
                         select.id="caseFieldInput"+j;  
                         var optionsValue=attributes[j].newCaseTypeOptions.split(',');
                         for(var i=0;i<optionsValue.length;i++){
                             select.options[select.options.length] = new Option(optionsValue[i], optionsValue[i]);
                         }          
-                        parent.appendChild(input);
+                        parent.appendChild(select);
                     }
                     else{
                         var input=document.createElement('input');
@@ -73,11 +73,24 @@ function displayAttributes(){
                     parent.appendChild(label);
                 }
                 if(attributes[j].newCaseTypeElement.length>0){
-                    var input=document.createElement('input');
-                    input.className='col-3 f-12 gray gray-border padding-input';
-                    input.type=attributes[j].newCaseTypeElement;
-                    input.id="caseFieldInput"+j;            
-                    parent.appendChild(input);
+                    if(attributes[j].newCaseTypeElement=="dropdown"){
+                        var select=document.createElement('select');
+                        select.className='col-3 f-12 padding-input';
+                        select.required=true;
+                        select.id="caseFieldInput"+j;  
+                        var optionsValue=attributes[j].newCaseTypeOptions.split(',');
+                        for(var i=0;i<optionsValue.length;i++){
+                            select.options[select.options.length] = new Option(optionsValue[i], optionsValue[i]);
+                        }          
+                        parent.appendChild(select);
+                    }
+                    else{
+                        var input=document.createElement('input');
+                        input.className='col-3 f-12 gray gray-border padding-input';
+                        input.type=attributes[j].newCaseTypeElement;
+                        input.id="caseFieldInput"+j;            
+                        parent.appendChild(input);
+                    }                    
                 }
             }
             individualSection.appendChild(parent);

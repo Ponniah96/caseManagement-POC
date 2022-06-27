@@ -57,9 +57,11 @@ function formSubmitted(){
     if(attributes.length>0){
         document.getElementById('save-details').classList.remove("disable");
     }
-    document.getElementById('option-subparent-subsection').remove();
-    document.getElementById('option-parent-section').classList.add('display-none');
-    count=0;
+    if(json.newCaseTypeElement=="dropdown"||json.newCaseTypeElement=="radio" ||json.newCaseTypeElement=="checkbox"){
+        document.getElementById('option-subparent-subsection').remove();
+        document.getElementById('option-parent-section').classList.add('display-none');
+        count=0;
+    }    
 }
 
 function changeInputType(e){

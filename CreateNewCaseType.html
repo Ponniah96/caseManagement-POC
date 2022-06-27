@@ -27,7 +27,7 @@
                         <h4>Create New Case Type</h4>
                       </header>
                       <div class="w3-container">
-                          <!-- <form id="myForm"> -->
+                          <form id="myForm" onsubmit="formSubmitted()" action="javascript:void(0);">
                                 <div class="row  m-1em ">
                                     <div class="col-6"><label for="attrName" class="f-12 gray">New Attribute name</p></div>
                                     <div class="col-6"><input class="f-12 gray gray-border padding-input" id="attrName" type="text" placeholder="Enter New Atribute Name" required></div>
@@ -51,18 +51,18 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-6"></div>
-                                        <div class="col-6" style="align-items: flex-end;"><a onclick="addItem()" id="add-item" class="theme-link">Add New Item+</a></div>
+                                        <div class="col-6 f-12 " style="text-align: end;"><a onclick="addItem()" id="add-item" class="theme-link">Add New Item+</a></div>
                                     </div>
                                 </div>
                                 <div class="row  m-1em ">
                                     <div class="col-6"><label for="mandatory-field" class="f-12 gray">Field type</p></div>
-                                    <div class="col-6"><input type="checkbox" name="mandatory" id="mandatory" value="Yes"> <label for="mandatory" class="f-12 gray"> Mandatory</label></div>
+                                    <div class="col-6"><input type="checkbox" name="mandatory" id="mandatory" value="Yes" required> <label for="mandatory" class="f-12 gray"> Mandatory</label></div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6"></div>
-                                    <div class="col-6"><input type="button" onclick="formSubmitted()" class="btn-primary" value="Submit"></div>
+                                    <div class="col-6"><input type="submit" class="btn-primary" value="Submit"></div>
                                 </div>       
-                          <!-- </form>                                          -->
+                          </form>                                         
                         <br><br>
                       </div>
                     </div>

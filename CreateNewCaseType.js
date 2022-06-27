@@ -93,7 +93,7 @@ function addItem(){
     subParentChild.id="option-subparent-child-section"
     subParentChild.className='row m-1em';
     var label=document.createElement('label');
-    label.className='col-6 f-12 gray padding-top';
+    label.className='col-6 f-12 gray padding-top required';
     label.htmlFor="Option-"+count;
     label.innerText="Option-"+count;
     label.id="option"+count;

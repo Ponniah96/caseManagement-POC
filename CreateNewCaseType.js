@@ -44,12 +44,10 @@ function formSubmitted(){
     else{
         CaseTypeValue.push(newCaseValue)
     }              
-    console.log(attributes, CaseTypeValue);
     localStorage["attributes"]=JSON.stringify(attributes);
     localStorage["caseTypeValue"]=JSON.stringify(CaseTypeValue);
     console.log(JSON.parse(localStorage['attributes']));
     console.log(JSON.parse(localStorage['caseTypeValue']));
-    //document.getElementById("casetypename").value ='';
     document.getElementById("attrName").value='';
     document.getElementById("datalist").value='';
     document.getElementById("mandatory").checked=false;
@@ -96,7 +94,7 @@ function addItem(){
     subParentChild.className='row m-1em';
     var label=document.createElement('label');
     label.className='col-6 f-12 gray padding-top';
-    //label.for=attributes[j].newCaseTypeName;
+    label.htmlFor="Option-"+count;
     label.innerText="Option-"+count;
     label.id="option"+count;
     subParentChild.appendChild(label);
@@ -106,6 +104,7 @@ function addItem(){
     input.className='f-12 gray gray-border padding-input';
     input.type='text';
     input.id="option-input"+count; 
+    input.required=true;
     inputDiv.appendChild(input);
     subParentChild.appendChild(inputDiv);
     subParentSubSection.appendChild(subParentChild);

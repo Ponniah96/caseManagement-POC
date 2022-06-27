@@ -102,6 +102,9 @@
     color: #007bc3;
 }
 
+.text-center{
+    text-align: center;
+}
 
 /** Modal CSS starts **/
 @media (min-width: 993px){

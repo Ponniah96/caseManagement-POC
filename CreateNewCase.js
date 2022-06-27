@@ -243,6 +243,7 @@ function showCaseDetails(){
             var showAttributeValue=document.createElement('div');
             showAttributeValue.className="col-6 f-12 gray ";
             showAttributeValue.innerText=attributes[j].newCaseTypeElementValue;
+            document.getElementById('popupHeader').innerText='Case Type Name- '+attributes[j].newCaseValue;
             parent.appendChild(showAttributeValue);
             popupContainer.appendChild(parent);
         }

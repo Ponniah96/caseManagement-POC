@@ -34,7 +34,7 @@ function displayAttributes(){
             if(attributes[j].newCaseTypeMandatory==true){
                 if(attributes[j].newCaseTypeName.length>0){
                     var label=document.createElement('label');
-                    label.className='col-3 f-12 gray required padding-top';
+                    label.className='col-3 f-14 gray required padding-top';
                     label.htmlFor=attributes[j].newCaseTypeName;
                     label.innerText=attributes[j].newCaseTypeName;
                     label.id="caseFieldLabel"+j;
@@ -43,7 +43,7 @@ function displayAttributes(){
                 if(attributes[j].newCaseTypeElement.length>0){
                     if(attributes[j].newCaseTypeElement=="dropdown"){
                         var select=document.createElement('select');
-                        select.className='col-3 f-12 padding-input';
+                        select.className='col-3 f-14 padding-input';
                         select.required=true;
                         select.id=attributes[j].newCaseTypeName;  
                         var optionsValue=attributes[j].newCaseTypeOptions.split(',');
@@ -55,7 +55,7 @@ function displayAttributes(){
                     }
                     else if(attributes[j].newCaseTypeElement=="radio"){
                         var radioParent=document.createElement('div');
-                        radioParent.className='col-3 f-12 gray padding-top';
+                        radioParent.className='col-3 f-14 padding-top';
                         var optionsValue=attributes[j].newCaseTypeOptions.split(',');
                         for(var i=0;i<optionsValue.length;i++){
                             var radioSubParent=document.createElement('div');                        
@@ -76,7 +76,7 @@ function displayAttributes(){
                     }
                     else if(attributes[j].newCaseTypeElement=="checkbox"){
                         var checkboxParent=document.createElement('div');
-                        checkboxParent.className='col-3 f-12 gray padding-top';
+                        checkboxParent.className='col-3 f-14 padding-top';
                         var optionsValue=attributes[j].newCaseTypeOptions.split(',');
                         for(var i=0;i<optionsValue.length;i++){
                             var checkboxSubParent=document.createElement('div');                        
@@ -97,7 +97,7 @@ function displayAttributes(){
                     }
                     else{
                         var input=document.createElement('input');
-                        input.className='col-3 f-12 gray gray-border padding-input';
+                        input.className='col-3 f-14 gray-border padding-input';
                         input.type=attributes[j].newCaseTypeElement;
                         input.required=true;
                         input.id=attributes[j].newCaseTypeName;            
@@ -109,7 +109,7 @@ function displayAttributes(){
             else{
                 if(attributes[j].newCaseTypeName.length>0){
                     var label=document.createElement('label');
-                    label.className='col-3 f-12 gray padding-top';
+                    label.className='col-3 f-14 gray padding-top';
                     label.for=attributes[j].newCaseTypeName;
                     label.innerText=attributes[j].newCaseTypeName;
                     label.id="caseFieldLabel"+j;
@@ -118,10 +118,11 @@ function displayAttributes(){
                 if(attributes[j].newCaseTypeElement.length>0){
                     if(attributes[j].newCaseTypeElement=="dropdown"){
                         var select=document.createElement('select');
-                        select.className='col-3 f-12 padding-input';
+                        select.className='col-3 f-14 padding-input';
                         select.required=true;
                         select.id=attributes[j].newCaseTypeName;  
                         var optionsValue=attributes[j].newCaseTypeOptions.split(',');
+                        optionsValue.splice(0,0,"Please Select");
                         for(var i=0;i<optionsValue.length;i++){
                             select.options[select.options.length] = new Option(optionsValue[i], optionsValue[i]);
                         }          
@@ -129,14 +130,13 @@ function displayAttributes(){
                     }
                     else if(attributes[j].newCaseTypeElement=="radio"){
                         var radioParent=document.createElement('div');
-                        radioParent.className='col-3 f-12 gray padding-top';
+                        radioParent.className='col-3 f-14 padding-top';
                         var optionsValue=attributes[j].newCaseTypeOptions.split(',');
                         for(var i=0;i<optionsValue.length;i++){
                             var radioSubParent=document.createElement('div');                        
                             var radioInput=document.createElement('input');
                             radioInput.type="radio";
                             radioInput.name=attributes[j].newCaseTypeName;
-                            radioInput.required=true;
                             radioInput.id=optionsValue[i];
                             radioInput.value=optionsValue[i];
                             radioSubParent.appendChild(radioInput);
@@ -150,14 +150,13 @@ function displayAttributes(){
                     }
                     else if(attributes[j].newCaseTypeElement=="checkbox"){
                         var checkboxParent=document.createElement('div');
-                        checkboxParent.className='col-3 f-12 gray padding-top';
+                        checkboxParent.className='col-3 f-14 padding-top';
                         var optionsValue=attributes[j].newCaseTypeOptions.split(',');
                         for(var i=0;i<optionsValue.length;i++){
                             var checkboxSubParent=document.createElement('div');                        
                             var checkboxInput=document.createElement('input');
                             checkboxInput.type="checkbox";
                             checkboxInput.name=attributes[j].newCaseTypeName;
-                            checkboxInput.required=true;
                             checkboxInput.id=optionsValue[i];
                             checkboxInput.value=optionsValue[i];
                             checkboxSubParent.appendChild(checkboxInput);
@@ -171,7 +170,7 @@ function displayAttributes(){
                     }
                     else{
                         var input=document.createElement('input');
-                        input.className='col-3 f-12 gray gray-border padding-input';
+                        input.className='col-3 f-14 gray-border padding-input';
                         input.type=attributes[j].newCaseTypeElement;
                         input.id=attributes[j].newCaseTypeName;            
                         parent.appendChild(input);
@@ -237,11 +236,11 @@ function showCaseDetails(){
             var parent=document.createElement('div');
             parent.className="row  m-1em "
             var showAttribute=document.createElement('div');
-            showAttribute.className="col-6 f-12 gray text-center";
+            showAttribute.className="col-6 f-14 gray text-center";
             showAttribute.innerText=attributes[j].newCaseTypeName;
             parent.appendChild(showAttribute);
             var showAttributeValue=document.createElement('div');
-            showAttributeValue.className="col-6 f-12 gray ";
+            showAttributeValue.className="col-6 f-14 gray ";
             showAttributeValue.innerText=attributes[j].newCaseTypeElementValue;
             document.getElementById('popupHeader').innerText='Case Type Name- '+attributes[j].newCaseValue;
             parent.appendChild(showAttributeValue);
@@ -252,7 +251,7 @@ function showCaseDetails(){
     popupContainer.appendChild(br);
     popupContainer.appendChild(br);
     popupContainer.appendChild(br);
-    popupContainerParent.appendChild(popupContainer)
+    popupContainerParent.appendChild(popupContainer);
     document.getElementById('id03').style.display='block';    
 }
 

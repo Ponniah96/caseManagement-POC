@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>New Case</title>
         <link rel="stylesheet" href="./CreateNewCaseType.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="./CreateNewCase.js"></script>
@@ -16,8 +17,8 @@
             </div>       
         </form> 
         <br>
-        <p class="case-type-header f-12 gray">Please select Case Type Name</p>
-        <select onchange="changeCaseType(this.value)" class="col-3 case-type-input f-12 padding-input" name="selectcasetype" id="selectcasetype" >
+        <p class="case-type-header f-14 gray">Please select Case Type Name</p>
+        <select onchange="changeCaseType(this.value)" class="col-3 case-type-input f-14 padding-input" name="selectcasetype" id="selectcasetype" >
             <option selected disabled value="">Please Select Case Type</option>
         </select>                 
         <br><br>
@@ -28,15 +29,15 @@
         <hr>
         <br>
         <div id="caseFieldValueSection" class="col-6 display-none">
-            <p class="case-type-header f-12 gray">Please Enter Case Type values</p>
+            <p class="case-type-header f-14 gray">Please Enter Case Type values</p>
             <form id="caseFieldValue" action="javascript:void(0);" onsubmit="formSubmission(this)">
             </form>
         </div>
         <div id="id03" class="w3-modal">
             <div class="w3-modal-content w3-animate-top w3-card-4">
-              <header class="w3-container w3-teal" style="background-color: #007bc3 !important;"> 
+              <header  class="w3-container w3-teal" style="background-color: #007bc3 !important;"> 
                 <span onclick="popupClose()" class="w3-button w3-display-topright">&times;</span>
-                <h4 id="popupHeader">New Case Details</h4>
+                <h4 id="popupHeader"></h4>
               </header>
               <div  class="w3-container">                    
                 <br>

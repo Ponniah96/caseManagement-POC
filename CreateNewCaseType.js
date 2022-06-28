@@ -93,7 +93,7 @@ function addItem(){
     subParentChild.id="option-subparent-child-section"
     subParentChild.className='row m-1em';
     var label=document.createElement('label');
-    label.className='col-6 f-12 gray padding-top required';
+    label.className='col-6 f-14 gray padding-top required';
     label.htmlFor="Option-"+count;
     label.innerText="Option-"+count;
     label.id="option"+count;
@@ -101,7 +101,7 @@ function addItem(){
     var inputDiv=document.createElement('div');
     inputDiv.className='col-6'
     var input=document.createElement('input');
-    input.className='f-12 gray gray-border padding-input';
+    input.className='f-14 gray-border padding-input';
     input.type='text';
     input.id="option-input"+count; 
     input.required=true;
